@@ -4,7 +4,7 @@ declare @springquarter varchar(16) select @springquarter = 'xspring'
 declare @summerquarter varchar(16) select @summerquarter = 'summer'
 declare @autumnquarter varchar(16) select @autumnquarter = 'autumn'
 
--- we use the declare statement above to control when specific quarters can feed into our SIS
+-- we use the declare statement above to control when specific quarters can feed into our SIS, by adding the 'x' in front of the quarter selection, we shut off that quarter from feeding
 
 select distinct
 (select [value] from dbo.getSourceIndexTable(r.[id], 'SlateID')) as [SlateID], -- 'Ref'
